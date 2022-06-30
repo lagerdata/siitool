@@ -2033,7 +2033,7 @@ void sii_release(SiiInfo *sii)
 size_t sii_generate(SiiInfo *sii, unsigned int add_pdo_mapping)
 {
 	size_t maxsize = EE_TO_BYTES(sii->config->eeprom_size);
-	sii->rawbytes = (uint8_t*) calloc(1, maxsize);
+	sii->rawbytes = (uint8_t*) calloc(1, 4*maxsize);
 	sii->rawsize = 0;
 
 	sii_write(sii, add_pdo_mapping);
